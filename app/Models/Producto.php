@@ -14,6 +14,12 @@ class Producto extends Model
         'nombre',
         'descripción',
         'unidad_medida',
-        'precio_unitario', // Asegúrate de que este nombre coincida con la columna en la base de datos
+        'precio_unitario', 
+        'imagen_url',
     ];
+    public function contratos()
+{
+    return $this->hasMany(Contrato::class);
+}
+
 }
